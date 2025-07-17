@@ -1,6 +1,6 @@
-import express from 'express';
-import { createClient } from '@supabase/supabase-js';
-import dotenv from 'dotenv';
+const express = require('express');
+const { createClient } = require('@supabase/supabase-js');
+const dotenv = require('dotenv');
 
 dotenv.config();
 
@@ -64,4 +64,4 @@ router.delete('/:id', async (req, res) => {
   res.status(204).send();
 });
 
-export default router;
+module.exports = router;
