@@ -34,6 +34,10 @@ app.get('/ping', (req, res) => {
     res.send('pong');
 });
 
+// Rutas para Clientes
+const clientesRouter = require('./clientes.js');
+app.use('/api/clientes', clientesRouter);
+
 // Ejemplo de ruta para obtener datos de Supabase
 app.get('/items', async (req, res) => {
     try {
