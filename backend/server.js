@@ -8,7 +8,9 @@ const port = process.env.PORT || 3000;
 
 // Configurar CORS para permitir peticiones desde tu frontend de Netlify
 // En producción, deberías restringir esto a la URL de tu frontend de Netlify
-app.use(cors()); // Usar cors
+app.use(cors({
+    origin: 'https://wonderful-licorice-ea1cef.netlify.app'
+})); // Configurar CORS para permitir solo tu frontend de Netlify
 
 app.use(express.json());
 
